@@ -1,5 +1,3 @@
-# python3
-
 """Demo module for showing some framework features.
 
 Provides a special test case that enters an interactive prompt within the test
@@ -43,11 +41,8 @@ class InteractiveTest(bases.TestCase):
 
     #. Start an interactive interpreter in the context of the execute method.
     """
-    PREREQUISITES = []
 
     def procedure(self, argument=None):
-        cons = repl.InteractiveConsole(namespace=locals(), io=self.UI._io,
-                                       ps1="TestCase> ")
+        cons = repl.InteractiveConsole(namespace=locals(), ps1="TestCase> ",
+                                       history="~/.hist_testcase")
         cons.interact(banner="Now try out the methods and other functions.")
-
-# vim:ts=4:sw=4:softtabstop=0:smarttab

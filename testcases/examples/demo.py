@@ -1,5 +1,3 @@
-# python3
-
 """
 Framework readiness and demo tests.
 --------
@@ -51,8 +49,6 @@ class BasicReadinessCheck(bases.TestCase):
     #. Answer yes to the following questions.
     """
 
-    PREREQUISITES = []
-
     def procedure(self):
         return self.manual()
 
@@ -90,8 +86,6 @@ class PassCheck(bases.TestCase):
 
     #. Return a passed indication.
     """
-
-    PREREQUISITES = []
 
     def procedure(self):
         return self.passed("Always passes")
@@ -131,8 +125,6 @@ class FailCheck(bases.TestCase):
 
     #. Return a failure indication.
     """
-
-    PREREQUISITES = []
 
     def procedure(self):
         return self.failed("Always fails")
@@ -238,5 +230,3 @@ class PassFailErrorScenario(bases.Scenario):
         suite.add_test(FailCheck)
         suite.add_test(ErrorCheck)
         return suite
-
-# vim:ts=4:sw=4:softtabstop=0:smarttab

@@ -1,13 +1,11 @@
-#!/usr/bin/python
-# vim:ts=4:sw=4:softtabstop=0:smarttab
-
 """
 Eat
 ---
 
-Example test case. Your overview documentation goes here.
+Example test case. Manual test to instruct runner to eat something.
 """
 
+from typing import ClassVar
 from devtest.qa import bases
 
 
@@ -16,7 +14,7 @@ class EatTheApple(bases.TestCase):
     Purpose
     -------
 
-    Demonstrate eating an apple. This is a manual test.
+    Demonstrate eating an apple. This is an interactive, manual test.
 
     Pass Criteria
     -------------
@@ -41,13 +39,15 @@ class EatTheApple(bases.TestCase):
     Procedure
     ---------
 
-    - Open mouth
-    - Place apple to mouth
-    - Bite with teeth
-    - Chew
-    - swallow
-    - repeat steps 2 through 5 until apple is gone.
+    1. Open mouth
+    2. Place apple to mouth
+    3. Bite with teeth
+    4. Chew
+    5. swallow
+    6. repeat steps 1 through 5 until apple is gone.
     """
+
+    INTERACTIVE: ClassVar[bool] = True
 
     def procedure(self):
         return self.manual()

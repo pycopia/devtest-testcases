@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=64.0", "setuptools-scm[simple]>=9.2", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devtest-testcases"
+dynamic = ["version"]
+description="Example test cases and base namespace package for the devtest framework."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = ["devtest"]
+authors = [{name = "Keith Dart", email = "keith.dart@gmail.com"}]
+maintainers = [{name = "Keith Dart", email = "keith.dart@gmail.com"}]
+requires-python = ">=3.10"
+keywords = ["qa", "quality", "devtest"]
+classifiers = [
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Framework :: Devtest",
+]
+
+[project.urls]
+Homepage = "https://github.com/pycopia/devtest-testcases"
+
+[tool.setuptools_scm]
+fallback_version = "v0.0.1"
+
+[tool.mypy]
+warn_unused_configs = true
+allow_untyped_defs = true
+
+[tool.pylsp-mypy]
+enabled = true
+live_mode = true
+strict = false
+allow_untyped_defs = true

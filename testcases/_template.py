@@ -48,7 +48,7 @@ class XXXSampleTest(bases.TestCase):
     """
     # Add the names of other test cases (full path if not in this module), that
     # this case depends on.
-    PREREQUISITES = []
+    PREREQUISITES: list[str] = []
 
     # HERE is where your main test logic goes. It may take arguments that are
     # obtained from the suite's add_test() method. You get a global config
@@ -64,9 +64,7 @@ class XXXScenario(bases.Scenario):
     """
 
     @staticmethod
-    def get_suite(config, environment, ui):
-        suite = bases.TestSuite(config, environment, ui, name="MyNewSuite")
+    def get_suite(config, testbed, ui):
+        suite = bases.TestSuite(config, testbed, ui, name="MyNewSuite")
         suite.add_test(XXXSampleTest)
         return suite
-
-# vim:ts=4:sw=4:softtabstop=0:smarttab
