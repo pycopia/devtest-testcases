@@ -1,0 +1,9 @@
+build
+flake8
+keyring
+mypy
+semver
+setuptools
+setuptools_scm
+wheel
+yapf
